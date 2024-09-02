@@ -4,28 +4,145 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My First Phone</title>
+    <script src="https://kit.fontawesome.com/8f24e6bae0.js" crossorigin="anonymous"></script>
     <style>
       body {
-        background-color: #8b9b91;
-        border: 3px solid #b7c2bb;
-      }
+        height: 100vh;
+      background: linear-gradient(yellow, rgb(88, 255, 255), rgb(255, 197, 91));
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
+    }
 
       .container {
-        background-color: #dec6ac;
-        border: 3px solid #b7c2bb;
+        background-color: rgb(0, 195, 255);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 70%;
+        margin: 0 auto;
+        padding: 30px;
+      }
+
+      .top-of-page {
+        background-color: pink;
+        margin: 0;
+      }
+
+      .icons {
+        color: violet;
+      }
+
+      .menu .page-menu {
+        display: flex;
+        justify-content: right;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+      }
+
+      .menu-list {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+      }
+
+      .menu-list li {
+        flex: 1;
+        text-align: center;
+        padding: 20px;
+        margin-left: 5px;
+      }
+
+      .menu-list li:first-child {
+        margin-left: 0;
+      }
+
+      .content {
+        display: flex;
+        gap: 20px;
+      }
+
+      .text {
+        flex: 1;
+        padding: 10px;
+        background-color: lightyellow;
+        border-radius: 10px;
+        align-items: center;
+      }
+
+      .slideshow-container {
+        flex: 1;
+        position: relative;
+        width: 70%;
+        max-width: 600px;
+        margin: auto;
+        overflow: hidden;
+        background-color: aqua;
+        border-radius: 500px;
+        border: 2px solid black;
+      }
+
+      .slide {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      .slide img {
+        width: 100%;
+        transform: rotate(20deg);
+      }
+
+      .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: auto;
+        padding: 16px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        background-color: orange;
+      }
+
+      .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+
+      .prev:hover, .next:hover {
+        background-color: greenyellow;
+      }
+
+      .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+
+      @keyframes fade{
+        from { opacity: .4; }
+        to { opacity: 1; }
       }
     </style>
   </head>
   <body>
-    <div class="colour-picker-section">
-      <div class="color-options">
-        <label> Theme Selector: girlypop?</label>
-      </div>
-    </div>
     <div class="container">
+      <div class="top-of-page">
       <div class="titles">
-        <h1>LG U8110</h1>
-        <h2>$0.99 text messages coming in so fast, this phone came with a holster</h2>
+        <h1>LG PM325</h1>
+        <h2>
+          Lorem ipsum dolor sit amet. 
+        </h2>
+      </div>
+      <div class="icons">
+        <i class="fa-solid fa-magnifying-glass"></i>
       </div>
       <div class="menu">
         <nav class="page-menu">
@@ -36,29 +153,88 @@
           </ul>
         </nav>
       </div>
-      <div class="image-container">
-        <img
-          class="phone"
-          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/141/377/original/Untitled_design%281%29.png?1724962392"
-          alt="phone-image"
-        />
-        <div class="small-blurb-container">
-          <p class="blurb">
-            Introduced in 2004, the LG U8110 had cutting edge technology:
-            <ul class="specs">
-                <li>Equipped with a 176 X 220 pixels screen.</li>
-                <li>Additional external monochrome display.</li>
-                <li>Four way navigation keys.</li>
-                <li>Access to wallpapers & polyphonic ringtones.</li>
-            </ul>
-          </p>
-        </div>
       </div>
+      <div class="content">
+      <div class="text">
+      <p>Lorem ipsum dolor sit amet. Ut nulla magnam vel magnam voluptatum ut iure voluptatem aut laborum quam est accusantium laudantium ut quidem alias. Et itaque reiciendis qui inventore totam non voluptates reprehenderit in beatae optio ut quasi corporis. Aut vero libero sit consequatur placeat 33 magni rerum aut dolorum enim eos sunt perspiciatis ut totam dolorem eum voluptas deserunt.</p>
+      </div>
+      <div class="slideshow-container">
+        <div class="slide fade">
+          <img
+            class="phone"
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/141/485/original/Untitled_design3.png?1725022814"
+            alt="phone-face"
+          />
+        </div>
+        <div class="slide fade">
+          <img
+            class="phone"
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/141/486/original/Untitled_design2.png?1725022820"
+            alt="phone-side1"
+          />
+        </div>
+        <div class="slide fade">
+          <img
+            class="phone"
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/141/487/original/Untitled_design1.png?1725022826"
+            alt="phone-back"
+          />
+        </div>
+        <div class="slide fade">
+          <img
+            class="phone"
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/141/486/original/Untitled_design2.png?1725022820"
+            alt="phone-side2"
+          />
+        </div>
+        <div class="slide fade">
+          <img
+            class="phone"
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/141/488/original/lgpm225.png?1725022835"
+            alt="phone-open"
+          />
+        </div>
+        <button class="prev" onclick="plusSlides(-1)">&#10094</button>
+        <button class="next" onclick="plusSlides(1)">&#10095</button>
+      </div>
+    </div></div>
+    <div class="bubbles">
+      <div class="bub1"></div>
+      <div class="bub1"></div>
+      <div class="bub1"></div>
     </div>
     <footer>
       Coded by <a href="" class="link">Nina B.</a> for SheCodes Monthly
       Challenge. Open sourced on <a href="" class="link">GitHub</a>.
     </footer>
-    <script></script>
+    <script>
+      let slideIndex = 0;
+      showSlides(slideIndex);
+
+    function showSlides(n) {
+      let slides = document.querySelectorAll(".slide");
+      if (n >= slides.length) {
+        slideIndex = 0;
+      } else if (n < 0) {
+        slideIndex = slides.length -1;
+      }
+
+      let offset = -slideIndex * 100;
+      document.querySelector('.slides').style.transform = `translateX(${offset})`;
+    }
+
+    function plusSlides(n) {
+      slideIndex += n;
+      showSlides(slideIndex);
+    }
+
+    setInterval(() => {
+      plusSlides(1);
+    }, 3000);
+
+    document.addEventListener('DOMContentLoaded', () => {
+      showSlides(slideIndex);
+    });
+    </script>
   </body>
 </html>
