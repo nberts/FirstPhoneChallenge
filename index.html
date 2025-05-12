@@ -4,16 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My First Phone</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/8f24e6bae0.js" crossorigin="anonymous"></script>
     <style>
       body {
         height: 100vh;
-      background: linear-gradient(yellow, rgb(88, 255, 255), rgb(255, 197, 91));
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-attachment: fixed;
-    }
+        background: linear-gradient(yellow, rgb(88, 255, 255), rgb(255, 197, 91));
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        font-family: 'Press Start 2P', cursive;
+      }
 
       .container {
         background-color: rgb(0, 195, 255);
@@ -28,6 +30,21 @@
       .top-of-page {
         background-color: pink;
         margin: 0;
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      .titles h1 {
+        font-size: 2em;
+        text-shadow: 2px 2px #ff69b4;
+        color: #333;
+        text-align: center;
+      }
+
+      .titles h2 {
+        font-size: 1em;
+        color: #666;
+        text-align: center;
       }
 
       .icons {
@@ -48,6 +65,7 @@
         padding: 0;
         margin: 0;
         width: 100%;
+        font-size: 0.8em;
       }
 
       .menu-list li {
@@ -55,15 +73,20 @@
         text-align: center;
         padding: 20px;
         margin-left: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
       }
 
-      .menu-list li:first-child {
-        margin-left: 0;
+      .menu-list li:hover {
+        background-color: #ff69b4;
+        color: white;
+        border-radius: 5px;
       }
 
       .content {
         display: flex;
         gap: 20px;
+        margin-top: 20px;
       }
 
       .text {
@@ -72,6 +95,8 @@
         background-color: lightyellow;
         border-radius: 10px;
         align-items: center;
+        line-height: 1.8;
+        font-size: 0.8em;
       }
 
       .slideshow-container {
@@ -80,20 +105,21 @@
         width: 70%;
         max-width: 600px;
         margin: auto;
-        overflow: hidden;
         background-color: aqua;
         border-radius: 500px;
         border: 2px solid black;
       }
 
       .slide {
-        display: flex;
-        transition: transform 0.5s ease-in-out;
+        display: none;
+        width: 100%;
       }
 
       .slide img {
         width: 100%;
+        height: auto;
         transform: rotate(20deg);
+        padding: 20px;
       }
 
       .prev, .next {
@@ -101,7 +127,6 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        width: auto;
         padding: 16px;
         color: white;
         font-weight: bold;
@@ -110,6 +135,7 @@
         border-radius: 0 3px 3px 0;
         user-select: none;
         background-color: orange;
+        z-index: 1;
       }
 
       .next {
@@ -126,115 +152,113 @@
         animation-duration: 1.5s;
       }
 
-      @keyframes fade{
+      @keyframes fade {
         from { opacity: .4; }
         to { opacity: 1; }
+      }
+
+      footer {
+        text-align: center;
+        padding: 20px;
+        font-size: 0.7em;
+        margin-top: 20px;
+      }
+
+      .link {
+        color: #ff69b4;
+        text-decoration: none;
+      }
+
+      .link:hover {
+        text-decoration: underline;
       }
     </style>
   </head>
   <body>
     <div class="container">
       <div class="top-of-page">
-      <div class="titles">
-        <h1>LG PM325</h1>
-        <h2>
-          Lorem ipsum dolor sit amet. 
-        </h2>
-      </div>
-      <div class="icons">
-        <i class="fa-solid fa-magnifying-glass"></i>
-      </div>
-      <div class="menu">
-        <nav class="page-menu">
-          <ul class="menu-list">
-            <li>Release</li>
-            <li>Additional Info</li>
-            <li>Contact Us</li>
-          </ul>
-        </nav>
-      </div>
+        <div class="titles">
+          <h1>LG PM325</h1>
+          <h2>My First Cell Phone - 2003 Edition</h2>
+        </div>
+        <div class="icons">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div class="menu">
+          <nav class="page-menu">
+            <ul class="menu-list">
+              <li>Release</li>
+              <li>Additional Info</li>
+              <li>Contact Us</li>
+            </ul>
+          </nav>
+        </div>
       </div>
       <div class="content">
-      <div class="text">
-      <p>Lorem ipsum dolor sit amet. Ut nulla magnam vel magnam voluptatum ut iure voluptatem aut laborum quam est accusantium laudantium ut quidem alias. Et itaque reiciendis qui inventore totam non voluptates reprehenderit in beatae optio ut quasi corporis. Aut vero libero sit consequatur placeat 33 magni rerum aut dolorum enim eos sunt perspiciatis ut totam dolorem eum voluptas deserunt.</p>
+        <div class="text">
+          <p>Back in 2003, my parents finally gave in and got me my very first cell phone - the legendary LG PM325! This little beauty wasn't just any phone, it was my gateway to teenage coolness. The best part? I figured out how to program the Beverly Hills 90210 theme song as my ringtone, and let me tell you, heads would turn in the mall food court whenever someone called! 😎</p>
+          </br>
+          <p>Sure, it didn't have a fancy camera or internet access, but it had SNAKE, and those blue LED lights on the side would blink with every notification. Plus, the flip action made me feel like I was in The Matrix every time I answered a call. The T9 texting made me the fastest thumb-typer in my friend group, and I spent hours personalizing the perfect combination of ringtones and wallpapers.</p>
+          </br>
+          <p>Storage space? A whopping 20 text messages! And don't even get me started on the battery life - this bad boy could last almost a week on a single charge. Those were the days when phones were phones, and accidentally dropping it was more likely to damage the floor than the phone!</p>
+        </div>
+        <div class="slideshow-container">
+          <div class="slide fade">
+            <img class="phone" src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/141/485/original/Untitled_design3.png?1725022814" alt="phone-face" />
+          </div>
+          <div class="slide fade">
+            <img class="phone" src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/141/486/original/Untitled_design2.png?1725022820" alt="phone-side1" />
+          </div>
+          <div class="slide fade">
+            <img class="phone" src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/141/487/original/Untitled_design1.png?1725022826" alt="phone-back" />
+          </div>
+          <div class="slide fade">
+            <img class="phone" src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/141/486/original/Untitled_design2.png?1725022820" alt="phone-side2" />
+          </div>
+          <div class="slide fade">
+            <img class="phone" src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/141/488/original/lgpm225.png?1725022835" alt="phone-open" />
+          </div>
+          <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+          <button class="next" onclick="plusSlides(1)">&#10095;</button>
+        </div>
       </div>
-      <div class="slideshow-container">
-        <div class="slide fade">
-          <img
-            class="phone"
-            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/141/485/original/Untitled_design3.png?1725022814"
-            alt="phone-face"
-          />
-        </div>
-        <div class="slide fade">
-          <img
-            class="phone"
-            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/141/486/original/Untitled_design2.png?1725022820"
-            alt="phone-side1"
-          />
-        </div>
-        <div class="slide fade">
-          <img
-            class="phone"
-            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/141/487/original/Untitled_design1.png?1725022826"
-            alt="phone-back"
-          />
-        </div>
-        <div class="slide fade">
-          <img
-            class="phone"
-            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/141/486/original/Untitled_design2.png?1725022820"
-            alt="phone-side2"
-          />
-        </div>
-        <div class="slide fade">
-          <img
-            class="phone"
-            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/141/488/original/lgpm225.png?1725022835"
-            alt="phone-open"
-          />
-        </div>
-        <button class="prev" onclick="plusSlides(-1)">&#10094</button>
-        <button class="next" onclick="plusSlides(1)">&#10095</button>
-      </div>
-    </div></div>
-    <div class="bubbles">
-      <div class="bub1"></div>
-      <div class="bub1"></div>
-      <div class="bub1"></div>
     </div>
     <footer>
-      Coded by <a href="" class="link">Nina B.</a> for SheCodes Monthly
-      Challenge. Open sourced on <a href="" class="link">GitHub</a>.
+      Coded by <a href="" class="link">Nina B.</a> for SheCodes Monthly Challenge. Open sourced on <a href="" class="link">GitHub</a>.
     </footer>
     <script>
       let slideIndex = 0;
-      showSlides(slideIndex);
+      const slides = document.querySelectorAll(".slide");
 
-    function showSlides(n) {
-      let slides = document.querySelectorAll(".slide");
-      if (n >= slides.length) {
-        slideIndex = 0;
-      } else if (n < 0) {
-        slideIndex = slides.length -1;
+      function showSlides(n) {
+        if (n >= slides.length) {
+          slideIndex = 0;
+        } else if (n < 0) {
+          slideIndex = slides.length - 1;
+        }
+
+        slides.forEach((slide) => {
+          slide.style.display = "none";
+        });
+        
+        slides[slideIndex].style.display = "block";
       }
 
-      let offset = -slideIndex * 100;
-      document.querySelector('.slides').style.transform = `translateX(${offset})`;
-    }
+      function plusSlides(n) {
+        slideIndex += n;
+        showSlides(slideIndex);
+      }
 
-    function plusSlides(n) {
-      slideIndex += n;
-      showSlides(slideIndex);
-    }
+      // Auto-advance slides
+      setInterval(() => {
+        slideIndex++;
+        showSlides(slideIndex);
+      }, 3000);
 
-    setInterval(() => {
-      plusSlides(1);
-    }, 3000);
-
-    document.addEventListener('DOMContentLoaded', () => {
-      showSlides(slideIndex);
-    });
+      // Initialize slideshow
+      document.addEventListener('DOMContentLoaded', () => {
+        showSlides(slideIndex);
+      });
     </script>
   </body>
 </html>
